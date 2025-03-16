@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Fraud Detection Predictor</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection Predictor</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="Transaction_Amount">Transaction Amount</label>
+                <input type="number" id="Transaction_Amount" name="Transaction_Amount" placeholder="Enter Transaction Amount" required>
+            </div>
+            <div class="form-group">
+                <label for="Transaction_Type">Transaction Type</label>
+                <select id="Transaction_Type" name="Transaction_Type">
+                    <option value="">Select</option>
+                    <option value="Bill Payment">Bill Payment</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                    <option value="ATM Withdrawal">ATM Withdrawal</option>
+                    <option value="POS Payment">POS Payment</option>
+                    <option value="Online Purchase">Online Purchase</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Time_of_Transaction">Time of Transaction</label>
+                <input type="number" id="Time_of_Transaction" name="Time_of_Transaction" placeholder="Enter Transaction Time" required>
+            </div>
+            <div class="form-group">
+                <label for="Device_Used">Device Used</label>
+                <select id="Device_Used" name="Device_Used">
+                    <option value="">Select</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Unknown Device">Unknown Device</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Previous_Fraudulent_Transactions">Previous Fraudulent Transactions</label>
+                <input type="number" id="Previous_Fraudulent_Transactions" name="Previous_Fraudulent_Transactions" placeholder="Enter Previous Fraudulent Transactions" required>
+            </div>
+            <div class="form-group">
+                <label for="Account_Age">Account Age (Days)</label>
+                <input type="number" id="Account_Age" name="Account_Age" placeholder="Enter Account Age in Days" required>
+            </div>
+            <div class="form-group">
+                <label for="Number_of_Transactions_Last_24H">Transactions in Last 24H</label>
+                <input type="number" id="Number_of_Transactions_Last_24H" name="Number_of_Transactions_Last_24H" placeholder="Enter Transactions Count in Last 24H" required>
+            </div>
+            <div class="form-group">
+                <label for="Payment_Method">Payment Method</label>
+                <select id="Payment_Method" name="Payment_Method">
+                    <option value="">Select</option>
+                    <option value="UPI">UPI</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="Net Banking">Net Banking</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Invalid Method">Invalid Method</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
