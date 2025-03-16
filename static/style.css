@@ -1,0 +1,85 @@
+body {
+    font-family: 'Georgia', sans-serif;
+    background-image: url(https://www.datavisor.com/wp-content/uploads/2023/03/authorized-payment-fraud-and-scams.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5); /* Darker background for better readability */
+    padding: 30px;
+    color: white;
+    width: 60%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* In case of overflow */
+    max-height: 90vh; /* Prevents it from being too tall */
+}
+
+/* Styling for form fields */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="number"], select {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+/* Styling for submit button */
+.btn {
+    background-color: #e63946;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #d62828;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+}
